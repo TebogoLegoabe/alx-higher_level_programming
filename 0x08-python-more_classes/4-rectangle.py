@@ -3,8 +3,18 @@
 """a class Rectangle that defines a rectangle"""
 
 class Rectangle:
+    """
+    Rectangle class
 
-    __width = None
+        Args:
+            width (int): The width of the new rectangle.
+            height (int): The height of the new rectangle.
+        """
+
+    def __init__(self, width=0, height=0):
+
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -18,8 +28,6 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-    __height = None
-
     @property
     def height(self):
         return self.__height
@@ -32,18 +40,26 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    def __init__(self, width=0, height=0):
-        self.width = width
-        self.height = height
-
     def area(self):
-        return self.width * self.height
+        return (self.__width * self.__height)
 
     def perimeter(self):
-        return 2 * (self.width + self.height)
+        if self.__width == 0 or self.__height == 0:
+            return (0)
+        return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        return "#" * self.width + "\n" + (" " * (self.width - 1)) + "#" * self.height
+        if self.__width == 0 or self.__height == 0:
+            return ("")
+
+        rect = []
+        for i in range(self.__height):
+            [rect.append('#') for j in range(self.__width)]
+            if i != self.__height - 1:
+                rect.append("\n")
+        return ("".join(rect))
 
     def __repr__(self):
-        return "Rectangle({}, {})".format(self.width, self.height)
+        rect = "Rectangle(" + str(self.__width)
+        rect += ", " + str(self.__height) + ")"
+        return (rect)
