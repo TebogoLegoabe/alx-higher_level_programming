@@ -1,22 +1,14 @@
 #!/usr/bin/python3
-"""a class Rectangle that defines a rectangle by: (based on 1-rectangle.py)"""
 
+"""class Rectangle that defines a rectangl"""
 class Rectangle:
     """
-    Defines class rectangle with private attribute width and height
+    Rectangle class
 
     Args:
-        width (int): width
-        height (int): height
 
-    Functions:
-        __init__(self, width, height)
-        width(self)
-        width(self, value)
-        height(self)
-        height(self, value)
-        area(self)
-        perimeter(self)
+
+
     """
     def __init__(self, width=0, height=0):
         self.width = width
@@ -50,4 +42,6 @@ class Rectangle:
         return self.__width * self.__height
 
     def perimeter(self):
-        return 2 * (self.__width + self.__height)
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return (2 * self.__width) + (2 * self.height)
