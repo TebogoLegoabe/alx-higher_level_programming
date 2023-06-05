@@ -1,19 +1,22 @@
 #!/usr/bin/python3
+"""class Rectangle that defines a rectangle by: (based on 0-rectangle.py)"""
 
-"""
-Rectangle that defines a rectangle by: (based on 0-rectangle.py)
-
-    Args:
-        width: length of rectangle
-        height: height of rectangle
-
-    Raises:
-        TypeError:
-        ValueError:
-"""
 class Rectangle:
-
-    __width = None
+    """
+    Defines class rectangle with private attribute width and height
+    Args:
+        width (int): width
+        height (int): height
+    Functions:
+        __init__(self, width, height)
+        width(self)
+        width(self, value)
+        height(self)
+        height(self, value)
+    """
+    def __init__(self, width=0, height=0):
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -27,8 +30,6 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-    __height = None
-
     @property
     def height(self):
         return self.__height
@@ -40,13 +41,3 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
-    def __init__(self, width=0, height=0):
-        self.width = width
-        self.height = height
-
-    def get_area(self):
-        return self.width * self.height
-
-    def get_perimeter(self):
-        return 2 * (self.width + self.height)
