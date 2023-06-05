@@ -3,7 +3,13 @@
 """a class Rectangle that defines a rectangle"""
 
 class Rectangle:
+    """
+    Rectangle class
 
+    Args:
+            width (int): The width of the new rectangle.
+            height (int): The height of the new rectangle.
+        """
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
