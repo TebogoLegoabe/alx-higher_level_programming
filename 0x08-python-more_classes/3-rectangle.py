@@ -1,8 +1,15 @@
 #!/usr/bin/python3
 
-"""a class Rectangle that defines a rectangle"""
+""" a class Rectangle that defines a rectangle"""
+
 
 class Rectangle:
+    """
+        Initialize a new Rectangle.
+        Args:
+            width (int): The width of the new rectangle.
+            height (int): The height of the new rectangle.
+        """
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -32,18 +39,20 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        return self.__width * self.__height
+        return (self.__width * self.__height)
 
     def perimeter(self):
-        return 2 * (self.__width + self.__height)
+        if self.__width == 0 or self.__height == 0:
+            return (0)
+        return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
-            return ""
-        rectangle_str = ""
-        for _ in range(self.__height):
-            rectangle_str += "#" * self.__width + "\n"
-        return rectangle_str
+            return ("")
 
-    def __repr__(self):
-        return f"Rectangle({self.__width}, {self.__height})"
+        rect = []
+        for i in range(self.__height):
+            [rect.append('#') for j in range(self.__width)]
+            if i != self.__height - 1:
+                rect.append("\n")
+        return ("".join(rect))
