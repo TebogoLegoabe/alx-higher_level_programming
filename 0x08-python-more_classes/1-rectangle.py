@@ -2,7 +2,7 @@
 """class Rectangle that defines a rectangle by: (based on 0-rectangle.py)"""
 
 class Rectangle:
-"""
+    """
     Defines class rectangle with private attribute width and height
     Args:
         width (int): width
@@ -13,7 +13,7 @@ class Rectangle:
         width(self, value)
         height(self)
         height(self, value)
-"""
+    """
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
