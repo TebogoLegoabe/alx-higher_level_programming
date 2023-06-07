@@ -6,7 +6,7 @@
 class Rectangle:
     """
     Rectangle class
-    
+
     Args:
 
 
