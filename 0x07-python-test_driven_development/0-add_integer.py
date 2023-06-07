@@ -1,5 +1,14 @@
 #!/usr/bin/python3
-"""Defines a dunctions that add two integers"""
+"""
+    adds 2 integers.
+
+    Args:
+        a: integer parameter
+        b: integer parameter
+
+    Raises:
+        TypeError: a must be an integer or b must be an integer
+"""
 
 def add_integer(a, b=98):
     """function that adds two integers"""
