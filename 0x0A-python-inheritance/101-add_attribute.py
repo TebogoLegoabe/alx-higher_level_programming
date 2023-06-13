@@ -1,17 +1,10 @@
-#!/usr/bin/python
-"""
-function that adds a new attributes
-"""
+#!/usr/bin/python3
+""" A attribute adding module """
 
 
-class MyClass:
-    pass
-
-obj = MyClass()
-add_attribute(obj, "name", "John")
-print(obj.name)
-
-add_attribute(obj, "age", 25)
-print(obj.age)
-
-add_attribute(obj, "name", "Jane")
+def add_attribute(a_class, name, value):
+    """ Adds a new attribute to an object if it’s possible """
+    if hasattr(a_class, "__dict__"):
+        setattr(a_class, name, value)
+    else:
+        raise TypeError("can't add new attribute")
