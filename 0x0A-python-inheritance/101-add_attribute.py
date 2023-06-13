@@ -2,6 +2,8 @@
 """
 function that adds a new attributes
 """
+
+
 class MyClass:
     pass
 
