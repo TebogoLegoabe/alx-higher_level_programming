@@ -6,5 +6,7 @@ Args:
     obj: object
     list: list of objects
 """
+
+
 def lookup(obj):
     return dir(obj)
