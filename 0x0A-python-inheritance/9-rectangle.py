@@ -3,6 +3,8 @@
 Rectangle class that inherits from BaseGeometry
 
 """
+
+
 class BaseGeometry:
     """Base class"""
     def area(self):

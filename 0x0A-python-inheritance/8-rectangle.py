@@ -7,6 +7,8 @@ Args:
     height: height of rectangle
 
 """
+
+
 class BaseGeometry:
     """Base class"""
     def area(self):

@@ -3,6 +3,8 @@
 Square class that inherits from Rectangle
 
 """
+
+
 class BaseGeometry:
     """Base class"""
     def area(self):
