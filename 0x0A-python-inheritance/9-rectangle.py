@@ -4,6 +4,7 @@ Rectangle class that inherits from BaseGeometry
 
 """
 class BaseGeometry:
+    """Base class"""
     def area(self):
         raise Exception("area() is not implemented")
 
@@ -14,6 +15,7 @@ class BaseGeometry:
             raise ValueError(f"{name} must be greater than 0")
 
 class Rectangle(BaseGeometry):
+    """ingerited class"""
     def __init__(self, width, height):
         self.__width = 0
         self.__height = 0

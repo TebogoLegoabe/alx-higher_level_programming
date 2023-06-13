@@ -8,6 +8,7 @@ Args:
 
 """
 class BaseGeometry:
+    """Base class"""
     def area(self):
         raise Exception("area() is not implemented")
 
@@ -18,6 +19,7 @@ class BaseGeometry:
             raise ValueError(f"{name} must be greater than 0")
 
 class Rectangle(BaseGeometry):
+    """inherited class"""
     def __int__(self, width, height):
         self.__width = width
         self.__height = height

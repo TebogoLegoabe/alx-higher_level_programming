@@ -4,6 +4,7 @@ Square class that inherits from Rectangle
 
 """
 class BaseGeometry:
+    """Base class"""
     def area(self):
         raise Exception("area() is not implemented")
 
@@ -14,6 +15,7 @@ class BaseGeometry:
             raise ValueError(f"{name} must be greater than 0")
 
 class Rectangle(BaseGeometry):
+    """inhereited from base class"""
     def __init__(self, width, height):
         self.__width = 0
         self.__height = 0
@@ -32,6 +34,7 @@ class Rectangle(BaseGeometry):
         return self.__str__()
 
 class Square(Rectangle):
+    """inherited from Rectangle"""
     def __init__(self, size):
         self.__size = 0
         self.integer_validator("size", size)
