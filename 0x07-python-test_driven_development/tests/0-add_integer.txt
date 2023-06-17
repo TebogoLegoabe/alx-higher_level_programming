@@ -1,0 +1,41 @@
+============================
+Test cases for add_integer
+============================
+
+Returns the sum of attributes a and b
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+CASE 1: Basic math
+	>>> add_integer(1, 2)
+	3
+
+CASE 2: Negative input:
+	>>> add_integer(12, -2)
+	10
+
+CASE 3: One input:
+	>>> add_integer(1)
+	99
+
+CASE 4: Float and negative input:
+	>>> add_integer(102.55, -2)
+	100
+
+CASE 5: String input:
+	>>> add_integer(4, "alx")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+CASE 6: two float numbers
+	>>> add_integer(10.1, 5.5)
+	15
+
+CASE 7: Two negative float input:
+	>>> add_integer(-10.55, -10.8)
+	-20
+
+CASE 8: Two input strings:
+	>>> add_integer("alx", "school")
+	Traceback (most recent call last):
+	TypeError: a must be an integer

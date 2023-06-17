@@ -1,0 +1,25 @@
+===========================
+Test cases for say_my_name
+===========================
+
+Returns first and last name
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+CASE 1: first name must be a string
+	>>> say_my_name("June", "May")
+	My name is June May
+
+CASE 2: when first name is not string
+	>>> say_my_name(14, "May")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+CASE 3: when last_name is not string
+	>>> say_my_name("June", 15)
+	Traceback (most recent call last)
+	TypeError: last_name must be a string
+
+CASE 4: with only first name
+	>>> say_my_name("John")
+	My name is John	
