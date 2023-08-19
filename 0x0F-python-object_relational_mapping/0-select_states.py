@@ -11,7 +11,7 @@ if __name__ == "__main__":
                          port=3306)
     cur = db.cursor()
     cur.execute("SELECT id, name FROM states ORDER BY id ASC")
-    allStates = cur.fetchall()
+    temps = cur.fetchall()
 
     for tmp in tmps:
         print(tmp)
